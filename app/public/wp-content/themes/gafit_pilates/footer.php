@@ -2,7 +2,19 @@
 
 <ul class="fixed-btn">
     <li><a href="https://www.slim-sng.jp/slim/web/d/sng/web_admission_procedure/?c=Pd6uT3BmYs&f=00001" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/join_bnr.svg" alt="先着300人限定 入会キャンペーン実施中!!"></a></li>
-    <li><a href="https://lin.ee/ecEvsI5" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/line_bnr.svg" alt="体験受付スタート!!"></a></li>
+    <?php
+    $experience_args = array(
+        'post_type' => 'experience',
+        'posts_per_page' => 1,
+    );
+    $experience_query = new WP_Query($experience_args);
+    if ($experience_query->have_posts()) :
+        while ($experience_query->have_posts()) : $experience_query->the_post();
+        ?>
+    <li><a href="<?php the_field('experience-link'); ?>" target="_blank"><img src="<?php the_field('experience-img'); ?>" alt="<?php the_title(); ?>"></a></li>
+    <?php endwhile; endif;
+        wp_reset_postdata();
+    ?>
 </ul>
 
 <footer class="site-footer">

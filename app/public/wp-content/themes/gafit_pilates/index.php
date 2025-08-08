@@ -43,7 +43,19 @@
     </div>
 </section>
 
-<a href="https://lin.ee/ecEvsI5" target="_blank" class="line-bnr"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/line_bnr.svg" alt="体験受付スタート!!"></a>
+<?php
+    $experience_args = array(
+        'post_type' => 'experience',
+        'posts_per_page' => 1,
+    );
+    $experience_query = new WP_Query($experience_args);
+    if ($experience_query->have_posts()) :
+        while ($experience_query->have_posts()) : $experience_query->the_post();
+        ?>
+<a href="<?php the_field('experience-link'); ?>" target="_blank" class="line-bnr"><img src="<?php the_field('experience-img'); ?>" alt="<?php the_title(); ?>"></a>
+<?php endwhile; endif;
+    wp_reset_postdata();
+?>
 
 <section class="sec --intro" id="link02">
     <h2 class="sec__ttl2">
@@ -85,7 +97,7 @@
 
 <div class="point-area">
     <picture>
-        <source media="(min-width:641px)" srcset="assets/img/top/point_info2.svg">
+        <source media="(min-width:641px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/point_info2.svg">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/point_info2_sp.svg" alt="GAFIT（ガフィット）のマシンピラティス">
     </picture>
 </div>

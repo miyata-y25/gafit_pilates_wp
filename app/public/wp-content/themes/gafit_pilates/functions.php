@@ -49,7 +49,7 @@ function create_post_type() {
   );
 
   register_post_type(
-    'schedule',
+    'experience',
     array(
       'label' => '体験バナー',
       'hierarchical' => false, //falseの場合、階層構造なし

@@ -581,17 +581,21 @@ sup {
     right: 1em;
     display: flex;
     align-items: flex-end;
-    justify-content: space-between;
+    justify-content: flex-end;
     @include max-screen($screen-xs) {
         bottom: 0.5em;
         right: 0.5em;
-        left: 0.5em;
+        left: 0;
     }
     li {
-        width: 49%;
-        max-width: 280px;
+        @include min-screen($screen-xs + 1) {
+            max-width: 280px;
+            margin-left: 2%;
+            flex: 1;
+        }
         @include max-screen($screen-xs) {
-            max-width: none;
+            width: 49%;
+            margin-left: 0.5em;
         }
     }
 }
