@@ -857,8 +857,10 @@ body {
 .faq-list {
     border: 1px solid $ora;
     transition: .3s;
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
+    @include min-screen($screen-md + 1) {
+    }
     &:not(:last-child) {
         margin-bottom: 3em;
         @include max-screen($screen-xs) {

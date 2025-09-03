@@ -206,6 +206,7 @@
             </li>
         </ul>
     </div>
+    <?php /*
     <ul class="staff-list">
         <?php
             $staff_args = array(
@@ -234,6 +235,7 @@
             wp_reset_postdata();
         ?>
     </ul>
+    */?>
     <div class="member-area">
         <h3 class="member-area__ttl">ピラティス会員さまは<br>24時間フィットネスジムが<br><span>無料で利用できます</span></h3>
         <ul class="member-area__check">
@@ -249,7 +251,7 @@
             <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/member_img03.png" alt=""><p>コラーゲンマシン</p></li>
             <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/member_img04.png" alt=""><p>温浴施設</p></li>
         </ul>
-        <a href="#" class="member-area__btn btn">詳しくはこちら</a>
+        <a href="https://www.gafit.jp/" class="member-area__btn btn">詳しくはこちら</a>
     </div>
 </section>
 
@@ -301,7 +303,7 @@
     <div class="flow-area">
         <ol class="flow-area__ol">
             <li>まずはWeb入会</li>
-            <li>プレオープン後にご来店手続き</li>
+            <li>次にご来店手続き</li>
         </ol>
         <h3 class="flow-area__ttl">入会に必要なもの</h3>
         <ul class="flow-area__ul">
@@ -319,6 +321,7 @@
     </div>
 </section>
 
+<?php /*
 <section class="sec --faq">
     <h2 class="sec__ttl">
         <span class="sec__ttl__en">FAQ</span>
@@ -341,6 +344,7 @@
         wp_reset_postdata();
     ?>
 </section>
+*/?>
 
 <section class="sec --access" id="link07">
     <h2 class="sec__ttl">
@@ -357,7 +361,7 @@
     </dl>
     <dl class="access-dl">
         <dt>TEL</dt>
-        <dd>090-9222-5505<br>GAFIT豊橋三ノ輪オープン準備室<br>受付時間：平日10時〜17時</dd>
+        <dd>0532-26-7665</dd>
     </dl>
     <dl class="access-dl">
         <dt>営業時間</dt>

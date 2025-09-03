@@ -956,5 +956,10 @@ sup {
 .site-footer .copyright {
   background: #000;
   color: #FFF;
-  padding: 1em 20px 6em;
+  padding: 1em 20px 12em;
+}
+@media screen and (max-width: 640px) {
+  .site-footer .copyright {
+    padding-bottom: 25vw;
+  }
 }
